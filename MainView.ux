@@ -1,0 +1,94 @@
+<App Background="#022328">
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#022328" />
+
+	<Router ux:Name="router" /> <!--지정한 페이지로 네비게이션 되게 하고, 그 경로들을 저장하고 있는 객체-->
+
+	<ClientPanel> 
+		<Navigator DefaultPath="splash">
+			<SplashPage ux:Template="splash" router="router" />
+			<LoginPage ux:Template="login" router="router" />
+			<EditHikePage ux:Template="editHike" router="router" />
+			<CreateAccPage ux:Template="createAcc" router="router" />
+			<AfterSubmitLoginPage ux:Template="afterSubmitLogin" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>
+<!--상태바를 제외한 나머지 영역 사용, text evaluer를 javascript에서 가져오기 위해 js 추가-->
+<!--
+<App>
+	<ClientPanel>
+		<JavaScript>
+			하이킹의 리스트를나타내는 배열 
+			//var hikes = require("hikes"); 나중에 파일분리했을떄 가져오려면,,,
+			var hikes = [
+			{
+				각각의 오브젝트
+				id: 0,
+				name: "Tricky Trails",
+				location: "Lakebed, Utah",
+				distance: 10.4,
+				rating: 4,
+				comments: "This hike was nice and hike-like. Glad I didn't bring a bike."
+			},
+			{
+				id: 1,
+				name: "Mondo Mountains",
+				location: "Black Hills, South Dakota",
+				distance: 20.86,
+				rating: 3,
+				comments: "Not the best, but would probably do again. Note to self: don't forget the sandwiches next time."
+			},
+			{
+				id: 2,
+				name: "Pesky Peaks",
+				location: "Bergenhagen, Norway",
+				distance: 8.2,
+				rating: 5,
+				comments: "Short but SO sweet!!"
+			},
+			{
+				id: 3,
+				name: "Rad Rivers",
+				location: "Moriyama, Japan",
+				distance: 12.3,
+				rating: 4,
+				comments: "Took my time with this one. Great view!"
+			},
+			{
+				id: 4,
+				name: "Dangerous Dirt",
+				location: "Cactus, Arizona",
+				distance: 19.34,
+				rating: 2,
+				comments: "Too long, too hot. Also that snakebite wasn't very fun."
+			}
+		];
+			var hike = Observable(); // 하이크 이름 버튼 선택했을 떄 입력가능
+			var Observable = require("FuseJS/Observable"); 동기화를 위해 추가 
+			var name = hike.map(function(x) {return x.name}; hike를 observable로 만들어서 ,,,,
+			function chooseHike(args) { 버튼클릭했을때 하이크 선택
+				hike.value = args.data;
+			}
+			바인딩을 위해 모듈 추가
+			module.exports = {
+				hikes: hikes, -> ux에서 이용하기위해.
+				name: name,
+				location: location,
+				...
+				chooseHike: chooseHike
+			}
+		</JavaScript>
+		<Scrollview>
+			<StackPanel>
+				<Each Items = "{hikes}"> 편집화면 위쪽의 버튼으로 이루어진 리스트를 표시하기위해
+						<Button Text="{name}" /> 리스트에서 개체의 이름이 메인이 된 버튼들,,, 
+				</Each>
+				<Text>{name}</Text>  -> Tricky Trails 출력..
+				<TextBox Value = "{name}" TextWrapping = "Wrap" InputHint = "Decimal" <- 이런건 /> 테스트위해 텍스트박스 추가 -> 앱상 이 박스에서 	입력한게 위에도 반영..
+
+			</StackPanel>
+		</Scrollview>
+	</ClientPanel>
+</App>
+-->

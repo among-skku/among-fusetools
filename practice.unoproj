@@ -1,0 +1,11 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "FuseJS"
+  ],
+  "Includes": [
+    "*",
+    "Modules/*.js:Bundle" // 가져오기 위해 
+  ]
+}

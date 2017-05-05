@@ -1,0 +1,21 @@
+<hikr.Page ux:Class="AfterSubmitLoginPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="CreateAccPage.js" />
+	<DockPanel>
+		<hikr.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Create Account</hikr.Text>
+		<Grid ColumnCount="2" Dock="Bottom">
+			<hikr.Button Text="Cancel" Clicked="{cancel}" />
+		</Grid>
+		<ScrollView>
+			<StackPanel ItemSpacing="10" Padding="10">
+				<!--<hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />-->
+
+				<StackPanel>
+					<Text>DONE!!!!</Text>
+					<!--<hikr.TextBox Value="{email}" />-->
+				</StackPanel>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</hikr.Page>
