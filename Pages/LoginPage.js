@@ -33,7 +33,7 @@ function afterSubmitLogin() {
 module.exports = {
 	//hikes: Context.hikes,
 	cancel: cancel,
-	afterSubmitLogin: afterSubmitLogin,
+	afterSubmitLogin: afterSubmitLogin
 	//goToHike: goToHike
 };
 

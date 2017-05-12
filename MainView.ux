@@ -8,9 +8,10 @@
 		<Navigator DefaultPath="splash">
 			<SplashPage ux:Template="splash" router="router" />
 			<LoginPage ux:Template="login" router="router" />
-			<EditHikePage ux:Template="editHike" router="router" />
+			<!--<EditHikePage ux:Template="editHike" router="router" />-->
 			<CreateAccPage ux:Template="createAcc" router="router" />
 			<AfterSubmitLoginPage ux:Template="afterSubmitLogin" router="router" />
+			<AfterCreateAccPage ux:Template="afterCreateAcc" router="router" />
 		</Navigator>
 	</ClientPanel>
 </App>
