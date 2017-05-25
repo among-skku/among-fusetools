@@ -1,0 +1,5 @@
+<among.Page ux:Class="CreateProjectsPage">
+	<Router ux:Dependency="router" />
+	<JavaScript File="CreateProjectsPage.js" />
+	<Text>[create projects]</Text>
+</among.Page>

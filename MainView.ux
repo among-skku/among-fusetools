@@ -1,4 +1,4 @@
-<App Background="#022328">
+	<App Background="#022328">
 	<iOS.StatusBarConfig Style="Light" />
 	<Android.StatusBarConfig Color="#022328" />
 
@@ -8,14 +8,13 @@
 		<Navigator DefaultPath="splash">
 			<SplashPage ux:Template="splash" router="router" />
 			<LoginPage ux:Template="login" router="router" />
-			<!--<EditHikePage ux:Template="editHike" router="router" />-->
 			<CreateAccPage ux:Template="createAcc" router="router" />
-			<AfterSubmitLoginPage ux:Template="afterSubmitLogin" router="router" />
+			<ProjectsMainPage ux:Template="projectsMain" router="router" />
 			<AfterCreateAccPage ux:Template="afterCreateAcc" router="router" />
+			<CreateProjectsPage ux:Template="createProjects" router="router" />
 		</Navigator>
 	</ClientPanel>
 </App>
-<!--상태바를 제외한 나머지 영역 사용, text evaluer를 javascript에서 가져오기 위해 js 추가-->
 <!--
 <App>
 	<ClientPanel>

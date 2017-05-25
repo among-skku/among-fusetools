@@ -1,13 +1,13 @@
-<hikr.Page ux:Class="LoginPage">
+<among.Page ux:Class="LoginPage">
 	<Router ux:Dependency="router" />
 
 	<JavaScript File="LoginPage.js" />
 
 	<DockPanel>
-		<hikr.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Log In</hikr.Text>
+		<among.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Log In</among.Text>
 		<Grid ColumnCount="2" Dock="Bottom">
-			<hikr.Button Text="Cancel" Clicked="{cancel}" />
-			<hikr.Button Text="Submit" Clicked="{afterSubmitLogin}" />
+			<among.Button Text="Cancel" Clicked="{cancel}" />
+			<among.Button Text="Submit" Clicked="{projectsmain}" />
 		</Grid>
 
 		<ScrollView>
@@ -40,7 +40,7 @@
 			</StackPanel>
 		</ScrollView>
 	</DockPanel>
-</hikr.Page>
+</among.Page>
 <!--
 	<Grid ux:Name="loginArea" Row="1" Padding="0,20" RowCount="2" Columns="auto,1*" Height="160" MaxWidth="400">
 				<Image     Row="0" Column="0" File="Assets/user_icon.png" Width="20" Height="20" Margin="10,0,30,0" Alignment="Left"/>

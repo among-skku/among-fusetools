@@ -1,11 +1,11 @@
-<hikr.Page ux:Class="AfterCreateAccPage">
+<among.Page ux:Class="AfterCreateAccPage">
 	<Router ux:Dependency="router" />
 
 	<JavaScript File="AfterCreateAccPage.js" />
 	<DockPanel>
-		<hikr.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Account Created!</hikr.Text>
+		<among.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Account Created!</among.Text>
 		<Grid ColumnCount="2" Dock="Bottom">
-			<hikr.Button Text="Next" Clicked="{next}" />
+			<among.Button Text="Next" Clicked="{next}" />
 		</Grid>
 		<ScrollView>
 			<StackPanel ItemSpacing="10" Padding="10">
@@ -17,4 +17,4 @@
 			</StackPanel>
 		</ScrollView>
 	</DockPanel>
-</hikr.Page>
+</among.Page>

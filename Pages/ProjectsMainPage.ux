@@ -1,0 +1,21 @@
+<among.Page ux:Class="ProjectsMainPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="CreateAccPage.js" />
+	<DockPanel>
+		<Grid>
+			<Image File="../Assets/globe.png" Width="20" Height="20" Margin="10,20,30,40" Alignment="TopLeft" Clicked="{createprojects}" />
+		</Grid>
+		<ScrollView>
+			<StackPanel ItemSpacing="10" Padding="10">
+	
+					<among.Button Text="Create Project" FontSize="18" Margin="40.0" Alignment="TopCenter" Clicked="{creatprojects}"/>
+		
+					<Text>[project lists will be here]</Text>
+	
+			</StackPanel>
+
+		</ScrollView>
+				<among.Button Text="Cancel" FontSize="18" Alignment="BottomCenter" Margin="10.0" Clicked="{cancel}" />
+	</DockPanel>
+</among.Page>

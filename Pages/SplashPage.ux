@@ -4,25 +4,24 @@
 	<JavaScript File="SplashPage.js" />
 
 	<DockPanel ClipToBounds="true">
-		<Video Layer="Background" File="../Assets/nature.mp4" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.5">
+		<!--<Video Layer="Background" File="../Assets/nature.mp4" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.5">
 			<Blur Radius="4.75" />
 		</Video>
-
-		<!--<hikr.Text Dock="Bottom" Margin="10" Opacity=".5" TextAlignment="Center" FontSize="12">original video by Graham Uhelski</hikr.Text>
-		-->
+	-->
+		<Image Layer="Background" File="../Assets/newback.jpg" StretchMode="UniformToFill" />
 		<Grid RowCount="2">
 			<StackPanel Alignment="VerticalCenter">
-				<hikr.Text Alignment="HorizontalCenter" FontSize="70">AMONG</hikr.Text>
-				<hikr.Text Alignment="HorizontalCenter" Opacity=".5">For team projects</hikr.Text>
+				<among.Text Alignment="HorizontalCenter" FontSize="70">AMONG</among.Text>
+				<among.Text Alignment="HorizontalCenter" Opacity=".5">For team projects</among.Text>
 			
 				<StackPanel>
-					<hikr.Text Alignment="HorizontalCenter" FontSize="80" Opacity="0">nullvalue</hikr.Text>
+					<among.Text Alignment="HorizontalCenter" FontSize="80" Opacity="0">nullvalue</among.Text>
 				</StackPanel>
-				<hikr.Button Text="Sign In" FontSize="18" Margin="40,0" Alignment="VerticalCenter" Clicked="{goToLoginPage}" />
+				<among.Button Text="Sign In" FontSize="18" Margin="40,0" Alignment="VerticalCenter" Clicked="{goToLoginPage}" />
 				<StackPanel>
-					<hikr.Text Alignment="HorizontalCenter" FontSize="20" Opacity="0">nullvalue</hikr.Text>
+					<among.Text Alignment="HorizontalCenter" FontSize="20" Opacity="0">nullvalue</among.Text>
 				</StackPanel>
-				<hikr.Button Text="Creat Account" FontSize="18" Margin="40,0" Alignment="VerticalCenter" Clicked="{goToCreateAccPage}" />
+				<among.Button Text="Creat Account" FontSize="18" Margin="40,0" Alignment="VerticalCenter" Clicked="{goToCreateAccPage}" />
 			</StackPanel>
 		</Grid>
 	</DockPanel>

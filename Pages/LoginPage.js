@@ -23,8 +23,8 @@ function cancel() {
 	//hike.value = hike.value;
 	router.goto("splash");
 }
-function afterSubmitLogin() {
-	router.goto("afterSubmitLogin");
+function projectsmain() {
+	router.goto("projectsMain");
 }
 //function goToHike(arg) {
 	//var hike = arg.data;
@@ -33,7 +33,7 @@ function afterSubmitLogin() {
 module.exports = {
 	//hikes: Context.hikes,
 	cancel: cancel,
-	afterSubmitLogin: afterSubmitLogin
+	projectsmain: projectsmain
 	//goToHike: goToHike
 };
 
