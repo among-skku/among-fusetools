@@ -1,5 +1,5 @@
 var Observable = require('FuseJS/Observable');
-var places = require("places");
+var places = require("lists");
 
 var current = Observable();
 
