@@ -1,0 +1,12 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+    "Fuse.BasicTheme"
+  ],
+  "Includes": [
+    "*",
+    "socket.io-1.7.3.js:Bundle"
+  ]
+}

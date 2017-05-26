@@ -1,0 +1,46 @@
+<App>
+	<JavaScript>
+	var Observable = require('FuseJS/Observable');
+	var msgs = Observable();
+
+	var socket = require('socket.io-1.7.3.js')("http://localhost:3000/");
+
+	socket.on('connect', function () {
+		console.log("socket connected"); 
+	});
+	socket.on('receive message', function(msg){
+		console.log("MAIN receive message " + msg);
+		msgs.add(msg);
+	});
+	socket.on('send message', function(msg){
+		console.log("MAIN send message " + msg);
+		msgs.add(msg);
+	});
+
+	msgs.add("First");
+	socket.emit('send message', 'userId', 'hello?');
+
+	var txt = Observable('');
+	module.exports.msgs = msgs;
+	module.exports.txt = txt;
+	module.exports.sendClick = function () {
+		console.log("sendClick: " + txt.value);
+		socket.emit('send message', "userId", txt.value);
+		txt.value = "";
+	};
+	</JavaScript>
+	<DockPanel>
+		<ScrollView>
+			<StackPanel>
+				<Each Items="{msgs}">
+					<Text Value="{}" />
+				</Each>
+			</StackPanel>
+		</ScrollView>
+		<StackPanel Orientation="Horizontal" Dock="Bottom">
+			<Basic.TextInput Width="250" Value="{txt}" />
+			<Basic.Button Text="Send" Clicked="{sendClick}" />
+		</StackPanel>
+	</DockPanel>
+</App>
+
